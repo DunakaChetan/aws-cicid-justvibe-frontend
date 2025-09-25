@@ -40,7 +40,7 @@ function App() {
             setIsLoadingAlbums(true);
             setAlbumsError(null);
             try {
-                const response = await fetch('http://54.163.11.244:8080/albums');
+                const response = await fetch('http://54.91.250.87:8080/albums');
                 if (!response.ok) throw new Error(`Failed to load albums: ${response.status}`);
                 const data = await response.json();
                 setAlbums(Array.isArray(data) ? data : []);
